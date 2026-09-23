@@ -5,6 +5,9 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BookNowBanner } from "@/components/BookNowBanner";
 import { ChatWidget } from "@/components/ChatWidget";
+import { JsonLd } from "@/components/JsonLd";
+import { getDisplayedGoogleReviews } from "@/lib/google-reviews";
+import { buildGoogleReviewsSchema } from "@/lib/schema";
 import { SITE_NAME, SITE_URL, SITE_DEFAULT_DESCRIPTION } from "@/lib/site-config";
 import "./globals.css";
 
@@ -37,13 +40,16 @@ export const metadata: Metadata = {
   description: SITE_DEFAULT_DESCRIPTION,
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const { reviews, meta } = await getDisplayedGoogleReviews();
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <JsonLd data={buildGoogleReviewsSchema(reviews, meta)} />
         <Script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}

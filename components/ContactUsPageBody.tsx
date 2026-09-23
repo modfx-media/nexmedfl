@@ -3,6 +3,7 @@ import { Reveal } from "@/components/Reveal";
 import { LeadFormEmbed } from "@/components/LeadFormEmbed";
 import { LocationSection } from "@/components/home/LocationSection";
 import { ContactGoogleReviews } from "@/components/ContactGoogleReviews";
+import { GoogleReviews } from "@/components/home/GoogleReviews";
 import { BUSINESS } from "@/lib/site-config";
 import { CONTACT_PAGE_CONTENT } from "@/lib/contact-content";
 
@@ -138,7 +139,11 @@ export function ContactUsPageBody() {
         </div>
       </section>
 
-      <ContactGoogleReviews />
+      <GoogleReviews>
+        {({ reviews, meta }) => (
+          <ContactGoogleReviews reviews={reviews} meta={meta} />
+        )}
+      </GoogleReviews>
 
       <LocationSection />
     </main>

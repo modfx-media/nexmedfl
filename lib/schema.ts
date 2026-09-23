@@ -1,4 +1,9 @@
 import { BUSINESS, SITE_NAME, SITE_URL, SOCIAL_LINKS } from "./site-config";
+import {
+  isFiveStarReview,
+  type GoogleReview,
+  type GoogleReviewsMeta,
+} from "./reviews";
 
 /**
  * Pure JSON-LD graph builder, replicates the exact Rank Math `@graph`
@@ -304,6 +309,47 @@ export function buildAggregateRatingSchema({
       bestRating,
       worstRating,
     },
+  };
+}
+
+/**
+ * Live Google reviews schema: overall rating/count from Places, and
+ * only the 5-star quotes that are actually rendered on the page.
+ */
+export function buildGoogleReviewsSchema(
+  reviews: GoogleReview[],
+  meta: GoogleReviewsMeta,
+) {
+  const visible = reviews.filter(isFiveStarReview);
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "@id": ORGANIZATION_ID,
+    name: BUSINESS.name,
+    ...(meta.rating > 0 && meta.reviewCount > 0
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: meta.rating,
+            reviewCount: meta.reviewCount,
+            bestRating: "5",
+          },
+        }
+      : {}),
+    ...(visible.length > 0
+      ? {
+          review: visible.map((review) => ({
+            "@type": "Review",
+            author: { "@type": "Person", name: review.name },
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: "5",
+              bestRating: "5",
+            },
+            reviewBody: review.quote,
+          })),
+        }
+      : {}),
   };
 }
 

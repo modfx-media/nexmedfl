@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { HERO, STATS } from "@/lib/home-content";
-import { AGGREGATE_RATING } from "@/lib/reviews-content";
 import { BUSINESS, SITE_NAME } from "@/lib/site-config";
 import { HeroBarChart } from "@/components/home/HeroBarChart";
 
@@ -67,7 +66,15 @@ function CalendarIcon() {
   );
 }
 
-export function Hero() {
+export function Hero({
+  rating,
+  reviewCount,
+  reviewsUrl,
+}: {
+  rating: number;
+  reviewCount: number;
+  reviewsUrl: string;
+}) {
   return (
     <section
       aria-label={SITE_NAME}
@@ -215,10 +222,17 @@ export function Hero() {
             className="nexmed-hero-enter mt-8 flex flex-wrap items-center gap-x-6 gap-y-3"
             style={{ animationDelay: "1.15s" }}
           >
-            <span className="inline-flex items-center gap-1.5 text-[13px] font-medium text-white/85">
-              <StarRow />
-              {AGGREGATE_RATING.ratingValue.toFixed(1)} · {AGGREGATE_RATING.reviewCount} Google reviews
-            </span>
+            {reviewCount > 0 ? (
+              <a
+                href={reviewsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-[13px] font-medium text-white/85 transition-colors hover:text-white"
+              >
+                <StarRow />
+                {rating.toFixed(1)} · {reviewCount} Google reviews
+              </a>
+            ) : null}
             <span className="inline-flex items-center gap-1.5 text-[13px] font-medium text-white/85">
               <ShieldIcon />
               Non-Surgical &amp; Drug-Free

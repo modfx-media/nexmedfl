@@ -1,21 +1,28 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
-import { buildGraph, buildAggregateRatingSchema } from "@/lib/schema";
+import { buildGraph, buildGoogleReviewsSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/JsonLd";
 import { getStaticPage } from "@/lib/pages";
 import { ReviewsPageBody } from "@/components/ReviewsPageBody";
-import { AGGREGATE_RATING } from "@/lib/reviews-content";
+import { GoogleReviews } from "@/components/home/GoogleReviews";
+import { getDisplayedGoogleReviews } from "@/lib/google-reviews";
 
 const PAGE = getStaticPage("/reviews/");
 
 export const metadata: Metadata = buildMetadata(PAGE);
 
-export default function Page() {
+export default async function Page() {
+  const { reviews, meta } = await getDisplayedGoogleReviews();
+
   return (
     <>
       <JsonLd data={buildGraph(PAGE)} />
-      <JsonLd data={buildAggregateRatingSchema(AGGREGATE_RATING)} />
-      <ReviewsPageBody />
+      <JsonLd data={buildGoogleReviewsSchema(reviews, meta)} />
+      <GoogleReviews>
+        {({ reviews: items, meta: reviewMeta }) => (
+          <ReviewsPageBody reviews={items} meta={reviewMeta} />
+        )}
+      </GoogleReviews>
     </>
   );
 }

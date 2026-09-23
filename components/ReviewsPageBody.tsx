@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
-import { REVIEWS, REVIEWS_INTRO, AGGREGATE_RATING } from "@/lib/reviews-content";
+import { REVIEWS_INTRO } from "@/lib/reviews-content";
+import type { GoogleReview, GoogleReviewsMeta } from "@/lib/reviews";
 
 function StarIcon({ className = "h-4 w-4" }: { className?: string }) {
   return (
@@ -61,7 +62,15 @@ function initials(name: string): string {
  * closing appointment CTA. Styled with the site's brand tokens, matching
  * the tone of ServicePageBody's hero/section patterns.
  */
-export function ReviewsPageBody() {
+export function ReviewsPageBody({
+  reviews,
+  meta,
+}: {
+  reviews: GoogleReview[];
+  meta: GoogleReviewsMeta;
+}) {
+  if (reviews.length === 0) return null;
+
   return (
     <main>
       {/* Hero */}
@@ -102,22 +111,29 @@ export function ReviewsPageBody() {
           <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
             <GoogleIcon className="h-6 w-6" />
             <div className="flex gap-1 text-[#FBBC04]">
-              {Array.from({ length: AGGREGATE_RATING.ratingValue }).map((_, i) => (
+              {Array.from({ length: 5 }).map((_, i) => (
                 <StarIcon key={i} className="h-5 w-5" />
               ))}
             </div>
             <p className="text-sm font-semibold text-ink">
-              {AGGREGATE_RATING.ratingValue.toFixed(1)} average · {AGGREGATE_RATING.reviewCount}+
-              verified patients
+              {meta.rating.toFixed(1)} average · {meta.reviewCount} Google reviews
             </p>
           </div>
+          <a
+            href={meta.reviewsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-deep transition-colors hover:text-brand"
+          >
+            View all Google reviews
+          </a>
         </div>
       </section>
 
       {/* Review cards */}
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {REVIEWS.map((review, i) => (
+          {reviews.map((review, i) => (
             <Reveal key={review.name} delay={i * 0.08}>
               <div className="flex h-full flex-col rounded-2xl border border-surface-border bg-white p-6 shadow-[0_18px_48px_-32px_rgba(15,23,42,0.28)] transition-all hover:-translate-y-1 hover:shadow-[0_24px_60px_-32px_rgba(15,23,42,0.32)]">
                 <div className="flex items-center gap-3">
@@ -133,34 +149,19 @@ export function ReviewsPageBody() {
                   </div>
                   <div>
                     <p className="text-[14px] font-semibold text-ink">{review.name}</p>
-                    <p className="text-[12px] text-ink-muted">Google review</p>
+                    <p className="text-[12px] text-ink-muted">
+                      {review.relativeTime ?? "Google review"}
+                    </p>
                   </div>
                 </div>
                 <div className="mt-3 flex gap-0.5 text-[#FBBC04]">
-                  {Array.from({ length: review.rating }).map((_, j) => (
+                  {Array.from({ length: 5 }).map((_, j) => (
                     <StarIcon key={j} className="h-4 w-4" />
                   ))}
                 </div>
                 <p className="mt-3 flex-1 text-[14px] leading-[1.7] text-ink-soft">
                   &ldquo;{review.quote}&rdquo;
                 </p>
-                {review.relatedTo ? (
-                  <Link
-                    href={review.relatedTo.href}
-                    className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-full bg-bg-tinted px-3 py-1.5 text-[12px] font-semibold text-brand-deep transition-colors hover:bg-surface"
-                  >
-                    Related: {review.relatedTo.label}
-                    <svg className="h-3 w-3" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                      <path
-                        d="M2 6h8m0 0L6 2m4 4L6 10"
-                        stroke="currentColor"
-                        strokeWidth="1.6"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </Link>
-                ) : null}
               </div>
             </Reveal>
           ))}
