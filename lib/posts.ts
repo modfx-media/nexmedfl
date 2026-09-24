@@ -36,6 +36,126 @@ export const BLOG_POSTS: BlogPostEntry[] = [
   {
     year: "2026",
     month: "09",
+    day: "24",
+    slug: "coughing-and-leg-pain-signs-of-a-herniated-disc",
+    title: "Coughing and Leg Pain: Signs of a Herniated Disc",
+    metaTitle: "Coughing and Leg Pain: Signs of a Herniated Disc",
+    description:
+      "Learn why coughing can intensify radiating leg pain and explore herniated disc treatment in Deltona with non-surgical, drug-free care options",
+    image: "/images/blog/Gemini_Generated_Image_xjsed1xjsed1xjse.jpg",
+    imageWidth: "2752",
+    imageHeight: "1536",
+    imageCaption: "coughing and radiating leg pain",
+    datePublished: "2026-09-24T14:00:00+00:00",
+    dateModified: "2026-09-24T14:00:00+00:00",
+    section: "Medical Care",
+    relatedServiceHref: "/conditions/spine/#herniated-disc",
+    relatedServiceLabel: "Herniated Disc",
+    body: [
+      {
+        paragraphs: [
+          "A sharp pain down your leg when you cough is not something to brush off, especially if it keeps happening. Coughing, sneezing, laughing hard, or straining can put extra pressure on an already irritated nerve in the lower back.",
+          "At Ormond Spine and Nerve Center, we know that this kind of pain can make ordinary moments feel unpredictable. Understanding what may be causing the flare-up can help you decide when it is time for a thorough evaluation.",
+        ],
+      },
+      {
+        heading: "Find the Source of Cough-Triggered Leg Pain",
+        paragraphs: [
+          "A cough may seem unrelated to back or leg pain, but the body is connected in surprising ways. When you cough forcefully, your abdominal and spinal pressure rise for a moment. If a nerve root in your lower back is already irritated, that sudden pressure may trigger a sharp, shooting pain into the leg.",
+          "We often encourage people not to self-diagnose based on one symptom alone. Cough-triggered pain can be associated with a lumbar disc concern, but an accurate evaluation is the best way to understand what may be affecting your movement and comfort.",
+          "Symptoms that may occur along with this type of pain include:",
+        ],
+        bullets: [
+          "Low back pain or stiffness",
+          "Pain in the buttock, thigh, calf, or foot",
+          "Tingling, numbness, or burning sensations",
+          "A feeling of weakness in one leg",
+          "Pain that worsens while sitting, bending, or driving",
+        ],
+      },
+      {
+        paragraphs: [
+          "Late September in Deltona can bring seasonal allergies, lingering humidity, and plenty of storm-related cleanup. More coughing, lifting, bending, and reaching can all stir up symptoms that were already quietly building. A flare-up does not automatically tell us the cause, but it is a reason to pay closer attention to the pattern.",
+        ],
+      },
+      {
+        heading: "Why a Herniated Disc Can Send Pain Down the Leg",
+        paragraphs: [
+          "Spinal discs sit between the bones of the spine, called vertebrae. They help cushion the spine and allow it to move. When a disc bulges or herniates, some of its inner material may press against or irritate a nearby nerve root. This is especially common in the lower back, where nerves travel from the spine into the buttocks, legs, and feet.",
+          "That nerve irritation may cause pain that travels well beyond the low back. Instead of feeling like a sore muscle in one small area, nerve-related pain can follow a noticeable path down one side of the body. Some people describe it as electric, hot, burning, stabbing, or like a sudden jolt.",
+          "Coughing can make this discomfort feel stronger because it briefly increases pressure through the abdomen and spine. For an irritated nerve, that extra pressure may be enough to send pain down the leg for a few seconds or longer.",
+          "Sciatica is different from ordinary muscle soreness. A strained muscle may feel tender, tight, or achy near the injured area. Nerve-related leg pain may be more likely to:",
+        ],
+        bullets: [
+          "Travel from the back or buttock into the leg",
+          "Follow a similar route each time it appears",
+          "Include tingling, numbness, or burning",
+          "Feel worse with coughing, sneezing, sitting, or bending",
+        ],
+      },
+      {
+        paragraphs: [
+          "We look at the full pattern of symptoms rather than assuming every case of leg pain comes from the same source.",
+        ],
+      },
+      {
+        heading: "Know When Leg Pain Needs Urgent Medical Evaluation",
+        paragraphs: [
+          "Some symptoms need prompt medical attention. While many back and leg concerns can be evaluated through conservative care, certain warning signs may point to a more serious issue that should not wait.",
+          "Seek urgent medical evaluation for symptoms such as:",
+        ],
+        bullets: [
+          "New or worsening weakness in the leg or foot",
+          "Loss of bladder or bowel control",
+          "Numbness in the groin or saddle area",
+          "Severe pain after a fall or other injury",
+          "Fever or unexplained weight loss along with back pain",
+        ],
+      },
+      {
+        paragraphs: [
+          "Even without these warning signs, ongoing pain deserves attention when it changes the way you live. Pain during coughing, sitting, driving, standing, walking, or bending can make work, sleep, errands, and family time harder than they need to be.",
+          "For anyone considering herniated disc treatment in Deltona, we recommend starting with a careful evaluation rather than relying on internet searches or guesswork. We consider your symptoms, movement patterns, health history, and possible nerve involvement to better understand what may be contributing to the problem. That information helps guide care decisions that fit your individual needs.",
+        ],
+      },
+      {
+        heading: "Explore Herniated Disc Treatment in Deltona",
+        paragraphs: [
+          "After the source and severity of symptoms are evaluated, non-surgical care may be appropriate for some people. No single approach is right for every back or leg problem. A care plan should be based on clinical findings and adjusted to the person in front of us, not a one-size-fits-all formula.",
+          "At Ormond Spine and Nerve Center, our drug-free, non-surgical options may include chiropractic care, spinal decompression therapy, laser therapy, and other supportive therapies. These services are designed to address pain, mobility concerns, spinal function, and nerve-related discomfort without automatically turning first to drugs or surgery.",
+          "A conservative plan may focus on goals such as:",
+        ],
+        bullets: [
+          "Reducing pressure and irritation around affected areas",
+          "Supporting healthier movement patterns",
+          "Improving comfort during everyday activity",
+          "Helping the spine function more effectively",
+          "Building confidence with walking, bending, and daily routines",
+        ],
+      },
+      {
+        paragraphs: [
+          "We take time to look beyond the moment when the cough caused the pain. The bigger question is why the nerve may be sensitive in the first place and what conservative options may support your comfort and mobility over time.",
+        ],
+      },
+      {
+        heading: "Move Toward a More Comfortable, Active Life",
+        paragraphs: [
+          "Leg pain that worsens with coughing is a signal worth taking seriously when it persists, spreads, or limits your normal routine. A professional evaluation can help clarify whether a disc, nerve, joint, or another concern may be involved and whether conservative care may fit your situation.",
+          "Fall often brings yardwork, storm cleanup, travel, and holiday preparation. Protect your back by lifting carefully, avoiding sudden twisting, and getting help with heavy or awkward tasks. When pain is not improving or begins to affect sleep, walking, work, or daily life, it is wise to have it assessed rather than trying to push through it.",
+        ],
+      },
+      {
+        heading: "Find Relief With a Personalized Care Plan",
+        paragraphs: [
+          "At Ormond Spine and Nerve Center, we evaluate the source of your symptoms and discuss options tailored to your needs. Learn whether herniated disc treatment in Deltona may help reduce nerve pressure and support more comfortable movement. To discuss your concerns and next steps, contact us today.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    month: "09",
     day: "17",
     slug: "how-rainy-weather-can-affect-knee-pain-in-deland",
     title: "Keep Moving Comfortably Through DeLand’s Rainy Season",
@@ -1770,6 +1890,7 @@ export function getReadTimeMinutes(post: BlogPostEntry): number {
 // services we actually offer is categorized (no legacy weight-loss/
 // hormone/peptide topics).
 const BLOG_TOPIC_BY_SLUG: Record<string, string> = {
+  "coughing-and-leg-pain-signs-of-a-herniated-disc": "Spine & Chiropractic",
   "how-rainy-weather-can-affect-knee-pain-in-deland": "Knee & Joint",
   "how-chiropractic-care-relieves-back-pain": "Spine & Chiropractic",
   "spinal-decompression-therapy-non-surgical-disc-relief": "Spine & Chiropractic",
