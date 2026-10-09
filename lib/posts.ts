@@ -35,6 +35,195 @@ export interface BlogPostEntry {
 export const BLOG_POSTS: BlogPostEntry[] = [
   {
     year: "2026",
+    month: "10",
+    day: "08",
+    slug: "why-morning-leg-pain-may-call-for-spinal-decompression-therapy-in-port-orange",
+    title: "Start Your Day with Less Leg Pain and More Mobility",
+    metaTitle: "Morning Leg Pain and Spinal Decompression Options",
+    description:
+      "Discover how spinal decompression therapy in Port Orange may help address morning leg pain linked to nerve pressure, disc issues, and spinal strain",
+    image: "/images/blog/morning-leg-pain-spinal-decompression.jpg",
+    imageWidth: "1000",
+    imageHeight: "670",
+    imageCaption: "morning leg pain and spinal decompression",
+    datePublished: "2026-10-08T14:00:00+00:00",
+    dateModified: "2026-10-08T14:00:00+00:00",
+    section: "Medical Care",
+    relatedServiceHref: "/spinal-decompression-therapy/",
+    relatedServiceLabel: "Spinal Decompression Therapy",
+    body: [
+      {
+        paragraphs: [
+          "Morning leg pain can turn the first few minutes of your day into a struggle. Stiffness, aching, tingling, burning, or shooting pain may show up in your hip, thigh, calf, or foot, even when the source of the problem begins lower in your back.",
+          "We often remind people that leg discomfort can have more than one cause. A careful evaluation can help us look at the full picture and determine whether the spine, nerves, joints, circulation, or another concern may be involved.",
+          "After hours of resting in one position, your body may feel tight when you first wake up. When spinal joints, discs, or nearby nerves are irritated, that stiffness can make standing, bending, or walking feel harder than it did later in the day.",
+          "Not every sore leg points to a back problem. Muscle strain, knee or joint concerns, circulation changes, and nerve irritation can all create discomfort. That is why we do not recommend guessing based on where pain is felt alone. Pain in the calf or foot, for example, may need a different approach than pain caused by pressure or reduced movement in the lower spine.",
+          "For some people, chiropractic care and spinal decompression may be considered as part of a non-surgical, drug-free plan. Our goal is to understand what may be limiting your movement and help identify options that fit your health history and daily needs.",
+        ],
+      },
+      {
+        heading: "When Morning Leg Pain May Point Back to the Spine",
+        paragraphs: [
+          "The nerves that travel from the lower back into the legs create a connection that is easy to overlook. If a disc, joint, or surrounding tissue affects one of those nerve pathways, discomfort may travel through the buttocks, hips, thighs, calves, or feet. It can be especially noticeable after you have been lying down, then get up and begin moving.",
+          "Certain patterns can be worth discussing with a provider, including:",
+        ],
+        bullets: [
+          "Low back pain that moves into one or both legs",
+          "Pain, numbness, or tingling that travels below the knee",
+          "A feeling of leg weakness or unsteadiness",
+          "Symptoms that change with sitting, standing, bending, or walking",
+          "Pain that repeatedly appears first thing in the morning",
+        ],
+      },
+      {
+        paragraphs: [
+          "These signs do not confirm one specific condition, and self-diagnosis can lead to the wrong type of care. During an evaluation, we consider your symptoms, movement limits, health history, and other findings to better understand whether your spine may be contributing to the problem.",
+          "Some symptoms need prompt medical attention rather than waiting for a routine evaluation. Sudden or worsening weakness, loss of bladder or bowel control, severe swelling, or other serious changes should be addressed right away through appropriate medical care.",
+        ],
+      },
+      {
+        heading: "How Spinal Decompression May Support a More Comfortable Morning",
+        paragraphs: [
+          "Spinal decompression is a non-surgical therapy that gently stretches and mobilizes the spine in a controlled setting. The purpose is not to promise an overnight fix. Instead, the therapy may help create a more comfortable environment for irritated spinal structures while supporting better movement over time.",
+          "When appropriate, spinal decompression therapy in Port Orange may use carefully measured traction to reduce pressure in targeted areas of the spine. Some people with disc-related discomfort, nerve irritation, sciatica-like symptoms, or ongoing low back pain that extends into the legs may be candidates for this approach.",
+          "A care plan should never be one-size-fits-all. Before recommending a service, we look at factors such as:",
+        ],
+        bullets: [
+          "Where pain begins and where it travels",
+          "How symptoms affect sleep, walking, work, and daily routines",
+          "Physical findings during the examination",
+          "Relevant health history",
+          "Imaging or additional evaluation when appropriate",
+        ],
+      },
+      {
+        paragraphs: [
+          "Decompression is not right for everyone. Certain health concerns may call for another approach, a referral, or further medical evaluation first. We can help you understand whether a non-surgical plan involving decompression, chiropractic care, or another service may make sense for your situation.",
+        ],
+      },
+      {
+        heading: "Fall Routines Can Reveal Pain Patterns Worth Addressing",
+        paragraphs: [
+          "Fall can be a useful time to pay attention to recurring morning leg pain. In Central Florida, busy schedules, long drives, seasonal events, and changes in activity can make existing discomfort easier to notice. More time sitting at work, traveling, or preparing for holiday plans may also expose patterns that felt easier to ignore during a less demanding routine.",
+          "Keeping track of a few details can give us helpful information during an evaluation. Notice when the pain begins, where it travels, how long it lasts, and what seems to make it better or worse. A clear pattern can help distinguish a brief ache after activity from a concern that may involve the spine or nerve pathways.",
+          "Gentle habits may also help you move more carefully in the morning. Try changing positions slowly before getting out of bed, avoiding sudden twisting, and giving yourself time to move before sitting for a long period. Supportive sleep posture, steady hydration, and caution with heavy lifting can also be practical ways to avoid adding strain to an already irritated area.",
+        ],
+      },
+      {
+        heading: "Explore Non-Surgical Options for Ongoing Leg Pain",
+        paragraphs: [
+          "Persistent morning leg pain deserves attention when it affects your walking, sleep, balance, work, or ability to enjoy everyday activities. Rather than assuming discomfort is simply part of getting older or relying only on pain medication, it helps to identify the likely source of the symptoms.",
+          "At Ormond Spine and Nerve Center, we take a patient-focused approach to spine, nerve, knee, joint, and circulation-related concerns. Depending on your individual needs, a broader plan may include spinal decompression, chiropractic care, laser therapy, shockwave therapy, compression therapy, or other non-surgical recommendations.",
+          "Pay attention to changes in your symptoms, especially pain that spreads farther down the leg, becomes more frequent, or begins limiting your routine. Getting clear answers early can help you make informed decisions about care and focus on steps that support greater comfort, mobility, and confidence each morning.",
+        ],
+      },
+      {
+        heading: "Find a Path Toward Lasting Relief",
+        paragraphs: [
+          "At Ormond Spine and Nerve Center, we provide individualized evaluations to help identify options that fit your needs. Learn how spinal decompression therapy in Port Orange may support reduced pressure on irritated spinal structures and improved daily movement. When you are ready to discuss your symptoms and care options, contact us to request an appointment.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
+    month: "10",
+    day: "01",
+    slug: "understanding-neuropathy-treatment-in-palm-coast-for-nighttime-burning",
+    title: "Find Neuropathy Treatment in Palm Coast for Better Sleep",
+    metaTitle: "Nighttime Burning Relief Options for Neuropathy",
+    description:
+      "Explore why neuropathy symptoms can worsen at night and learn how neuropathy treatment in Palm Coast may help support comfort and better sleep",
+    image: "/images/blog/nighttime-burning-relief-options-for-neuropathy.webp",
+    imageWidth: "1024",
+    imageHeight: "572",
+    imageCaption: "nighttime burning relief for neuropathy",
+    datePublished: "2026-10-01T14:00:00+00:00",
+    dateModified: "2026-10-01T14:00:00+00:00",
+    section: "Medical Care",
+    relatedServiceHref: "/neuropathy-treatment/",
+    relatedServiceLabel: "Neuropathy Treatment",
+    body: [
+      {
+        paragraphs: [
+          "Burning, tingling, numbness, or electric sensations in your feet can make nighttime feel far too long. Even a comfortable bed may feel unbearable when your skin is sensitive or your legs will not settle down. The next day, poor sleep can leave you tired, frustrated, and less able to enjoy the things you normally do.",
+          "Nighttime nerve discomfort is common, but it is not something you should simply accept as part of getting older. At Ormond Spine and Nerve Center, we provide a nearby option for people seeking neuropathy treatment in Palm Coast and surrounding coastal communities. Our non-surgical, drug-free care plans are built around your symptoms, health history, mobility needs, and personal goals.",
+        ],
+      },
+      {
+        heading: "Why Nerve Pain Often Feels Worse After Dark",
+        paragraphs: [
+          "Peripheral neuropathy can affect you throughout the day, yet the symptoms may seem much louder once the house gets quiet. During daylight hours, work, errands, conversations, and movement can pull your attention away from mild burning or pins and needles. When you lie down at night without those distractions, every nerve sensation can feel harder to ignore.",
+          "Body position can also play a role. Staying in one position for a long time may make it difficult to get comfortable, especially if you already have back, leg, joint, or circulation concerns. A sheet, blanket, sock, or even the touch of a mattress can feel unpleasant when the skin is overly sensitive. Some people also notice cramping, restlessness, or more numbness after they have been still for a while.",
+          "Burning feet or leg pain does not always have one simple explanation. Diabetes, circulation concerns, previous injuries, spinal issues, vitamin deficiencies, medications, and other health conditions may be connected to nerve-related symptoms. Rather than trying to label the problem on your own, we recommend a professional evaluation to look at the full picture.",
+        ],
+      },
+      {
+        heading: "Recognize Symptoms That Need a Professional Evaluation",
+        paragraphs: [
+          "Nerve symptoms can show up in different ways, and they may start slowly. For some people, the problem begins in the toes or soles of the feet and gradually moves upward. Others first notice that their feet feel strange in shoes, on the floor, or under bedding at night.",
+          "Symptoms that may be associated with neuropathy include:",
+        ],
+        bullets: [
+          "Burning, tingling, or pins and needles in the feet or legs",
+          "Sharp, shooting, or electric-like pain",
+          "Numbness or unusual sensitivity to touch",
+          "Weakness, balance changes, or a feeling of walking on a cushion",
+          "Cramping or discomfort that interrupts sleep",
+        ],
+      },
+      {
+        paragraphs: [
+          "Numbness deserves close attention because it can make it harder to notice cuts, blisters, pressure spots, heat, or other foot problems. If you have diabetes or reduced circulation, regular foot checks and guidance from your medical provider are especially important. A small issue can be easier to miss when feeling is reduced.",
+          "Some symptoms need urgent medical attention. Seek emergency care for sudden weakness, facial drooping, speech changes, chest pain, severe swelling, a cold or discolored limb, rapidly worsening symptoms, or wounds that do not heal. These signs may point to concerns that should not wait for routine care.",
+        ],
+      },
+      {
+        heading: "How We Approach Neuropathy Treatment in Palm Coast",
+        paragraphs: [
+          "A helpful care plan starts with understanding the person behind the symptoms. When you visit us, we may review when your discomfort occurs, what it feels like, how it affects sleep and movement, and whether you have a history of injury, back problems, circulation concerns, or other diagnoses. We also consider your current mobility, daily routines, and treatment goals.",
+          "This kind of review can help us identify whether nerve irritation, spinal dysfunction, joint concerns, circulation issues, or another factor may be contributing to your discomfort. Not every burning sensation comes from the same source, so a one-size-fits-all approach may overlook details that matter.",
+          "When appropriate based on your evaluation, our non-surgical and drug-free services may include chiropractic care, spinal decompression therapy, laser therapy, shockwave therapy, and compression therapy. Recommendations depend on your individual care plan. We may also discuss supportive habits related to movement, footwear, home routines, and coordination with other healthcare providers when needed.",
+          "The goal is not to make promises about a quick fix. Instead, we focus on helping you better understand what may be affecting your comfort, mobility, and daily function, including the restless hours after dark.",
+        ],
+      },
+      {
+        heading: "Build a Fall Routine That Supports Better Nights",
+        paragraphs: [
+          "Fall in Palm Coast often brings fuller calendars, holiday planning, school activities, and more reasons to stay on your feet. Keeping a simple routine can support your comfort while you work with a qualified professional on persistent symptoms. Small changes should fit your current ability level and any guidance you have received from your healthcare providers.",
+          "Consider discussing these habits with your provider:",
+        ],
+        bullets: [
+          "Gentle, provider-approved movement, such as short walks or light stretching",
+          "Regular position changes instead of remaining still for long periods",
+          "Footwear that fits well and does not create pressure points",
+          "Loose, comfortable socks if tight elastic leaves marks or feels irritating",
+          "Light bedding if extra warmth seems to make burning sensations more noticeable",
+        ],
+      },
+      {
+        paragraphs: [
+          "A consistent bedtime and wake-up time may also help create a calmer wind-down routine. If sleep is being interrupted often, bring that up during your evaluation. Nighttime symptoms are not just an inconvenience when they begin affecting your energy, mood, work, exercise, or confidence while walking.",
+          "Daily foot checks can be a smart habit for anyone with numbness, especially those with diabetes. Look for redness, swelling, blisters, cuts, changes in skin color, or areas that feel unusually warm. Persistent burning, progressing numbness, new balance changes, or pain that limits everyday activity are all reasons to seek professional guidance.",
+        ],
+      },
+      {
+        heading: "Take the Next Step Toward Calmer Nights",
+        paragraphs: [
+          "You do not have to sort through nighttime burning, tingling, or numbness by yourself. Bringing a clear list of symptoms, current medications, relevant diagnoses, past injuries, and questions to an evaluation can help us better understand what you are experiencing and whether neuropathy treatment in Palm Coast may fit your needs.",
+          "Better rest often begins with paying attention to patterns instead of pushing through them. When discomfort keeps changing your evenings, limits seasonal outings, or makes simple movement feel uncertain, a thoughtful evaluation can help identify appropriate next steps.",
+        ],
+      },
+      {
+        heading: "Find a Clearer Path to More Comfortable Nights",
+        paragraphs: [
+          "At Ormond Spine and Nerve Center, we take time to understand how your symptoms affect sleep, movement, and daily routines. Learn how neuropathy treatment in Palm Coast may address your individual concerns with a personalized approach. When you are ready to discuss your options, contact us to request an appointment.",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2026",
     month: "09",
     day: "24",
     slug: "coughing-and-leg-pain-signs-of-a-herniated-disc",
@@ -1890,6 +2079,10 @@ export function getReadTimeMinutes(post: BlogPostEntry): number {
 // services we actually offer is categorized (no legacy weight-loss/
 // hormone/peptide topics).
 const BLOG_TOPIC_BY_SLUG: Record<string, string> = {
+  "why-morning-leg-pain-may-call-for-spinal-decompression-therapy-in-port-orange":
+    "Spine & Chiropractic",
+  "understanding-neuropathy-treatment-in-palm-coast-for-nighttime-burning":
+    "Neuropathy & Nerve Health",
   "coughing-and-leg-pain-signs-of-a-herniated-disc": "Spine & Chiropractic",
   "how-rainy-weather-can-affect-knee-pain-in-deland": "Knee & Joint",
   "how-chiropractic-care-relieves-back-pain": "Spine & Chiropractic",
