@@ -5,11 +5,11 @@ import Link from "next/link";
 
 const FORM_SCRIPT_SRC = "https://link.msgsndr.com/js/form_embed.js";
 const FORM_SRC =
-  "https://api.leadconnectorhq.com/widget/form/fUzMnwnqbW2lAQ2zRJmB";
-const FORM_ID = "fUzMnwnqbW2lAQ2zRJmB";
+  "https://api.leadconnectorhq.com/widget/form/OB3hsku9oEPy4qe17xy0";
+const FORM_ID = "OB3hsku9oEPy4qe17xy0";
 
 /**
- * Embeds the client-provided LeadConnector ("🟢 Website Form - Ormond")
+ * Embeds the client-provided LeadConnector ("Website Form")
  * inline iframe form. The companion `form_embed.js` script (which
  * handles the iframe's auto-resize behavior) is injected once per page
  * load via `useEffect` rather than a raw inline `<script>` tag, so it
@@ -49,7 +49,7 @@ export function LeadFormEmbed({
 
   return (
     <div>
-      <div className="relative h-[900px] w-full overflow-hidden rounded-2xl border border-surface-border/70 bg-white shadow-[0_18px_48px_-32px_rgba(15,23,42,0.22)] sm:h-[820px]">
+      <div className="relative h-[960px] w-full overflow-hidden rounded-2xl border border-surface-border/70 bg-white shadow-[0_18px_48px_-32px_rgba(15,23,42,0.22)] sm:h-[880px]">
         {!loaded ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-bg-tinted to-white">
             <span className="h-9 w-9 animate-spin rounded-full border-[3px] border-brand-cyan/25 border-t-brand-deep" />
@@ -60,7 +60,7 @@ export function LeadFormEmbed({
         ) : null}
         <iframe
           src={FORM_SRC}
-          style={{ width: "100%", height: "100%", border: "none", borderRadius: "3px" }}
+          style={{ width: "100%", height: "100%", border: "none", borderRadius: "8px" }}
           id={`inline-${FORM_ID}`}
           data-layout="{'id':'INLINE'}"
           data-trigger-type="alwaysShow"
@@ -69,10 +69,12 @@ export function LeadFormEmbed({
           data-activation-value=""
           data-deactivation-type="neverDeactivate"
           data-deactivation-value=""
-          data-form-name="🟢 Website Form - Ormond"
-          data-height="747"
+          data-form-name="Website Form"
+          data-height="797"
           data-layout-iframe-id={`inline-${FORM_ID}`}
           data-form-id={FORM_ID}
+          data-cookie-consent="true"
+          data-cookie-consent-provider="auto"
           title={title}
           onLoad={() => setLoaded(true)}
         />
