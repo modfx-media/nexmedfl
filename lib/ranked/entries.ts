@@ -1,3 +1,4 @@
+import { listCmsBlogEntries } from "@/lib/cms/blog-entries";
 import { BLOG_POSTS, type BlogPostEntry } from "@/lib/posts";
 import { assignUniqueBlogCovers, DEFAULT_CTA } from "./config";
 import type { BlogPostData } from "./types";
@@ -40,7 +41,19 @@ export async function getPublishedBlogEntries(): Promise<BlogPostEntry[]> {
     reservedSlugs: new Set(local.map((p) => p.slug)),
   });
 
-  return uniqued.sort(
+  const sorted = uniqued.sort(
+    (a, b) =>
+      new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime(),
+  );
+
+  // Published Payload posts are additive. A matching slug replaces the
+  // designed entry; drafts never reach this list outside draft mode.
+  const cmsPosts = await listCmsBlogEntries();
+  if (cmsPosts.length === 0) return sorted;
+
+  const bySlug = new Map(sorted.map((post) => [post.slug, post]));
+  for (const post of cmsPosts) bySlug.set(post.slug, post);
+  return [...bySlug.values()].sort(
     (a, b) =>
       new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime(),
   );

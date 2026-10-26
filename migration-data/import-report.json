@@ -1,0 +1,456 @@
+{
+  "ranAt": "2026-10-26T16:32:25.656Z",
+  "created": 0,
+  "updated": 65,
+  "failed": 0,
+  "records": [
+    {
+      "action": "updated",
+      "collection": "categories",
+      "id": 1,
+      "legacyId": "category:medical-care"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 1,
+      "legacyId": "page:/",
+      "sourceUrl": "https://ormondspinenervecenter.com/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 2,
+      "legacyId": "page:/payment-plans/",
+      "sourceUrl": "https://ormondspinenervecenter.com/payment-plans/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 3,
+      "legacyId": "page:/financing-options/",
+      "sourceUrl": "https://ormondspinenervecenter.com/financing-options/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 4,
+      "legacyId": "page:/no-suprises-act/",
+      "sourceUrl": "https://ormondspinenervecenter.com/no-suprises-act/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 5,
+      "legacyId": "page:/hippa-privacy-policy/",
+      "sourceUrl": "https://ormondspinenervecenter.com/hippa-privacy-policy/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 6,
+      "legacyId": "page:/privacy-policy/",
+      "sourceUrl": "https://ormondspinenervecenter.com/privacy-policy/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 7,
+      "legacyId": "page:/terms-and-conditions/",
+      "sourceUrl": "https://ormondspinenervecenter.com/terms-and-conditions/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 8,
+      "legacyId": "page:/career-opportunities/",
+      "sourceUrl": "https://ormondspinenervecenter.com/career-opportunities/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 9,
+      "legacyId": "page:/appointment-request/",
+      "sourceUrl": "https://ormondspinenervecenter.com/appointment-request/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 10,
+      "legacyId": "page:/contact-us/",
+      "sourceUrl": "https://ormondspinenervecenter.com/contact-us/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 11,
+      "legacyId": "page:/blogs/",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 12,
+      "legacyId": "page:/neuropathy-appointment-request/",
+      "sourceUrl": "https://ormondspinenervecenter.com/neuropathy-appointment-request/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 13,
+      "legacyId": "page:/reviews/",
+      "sourceUrl": "https://ormondspinenervecenter.com/reviews/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 14,
+      "legacyId": "page:/knee-pain-treatment/",
+      "sourceUrl": "https://ormondspinenervecenter.com/knee-pain-treatment/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 15,
+      "legacyId": "page:/neuropathy-treatment/",
+      "sourceUrl": "https://ormondspinenervecenter.com/neuropathy-treatment/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 16,
+      "legacyId": "page:/services/",
+      "sourceUrl": "https://ormondspinenervecenter.com/services/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 17,
+      "legacyId": "page:/meet-our-team/",
+      "sourceUrl": "https://ormondspinenervecenter.com/meet-our-team/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 18,
+      "legacyId": "page:/chiropractic-care/",
+      "sourceUrl": "https://ormondspinenervecenter.com/chiropractic-care/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 19,
+      "legacyId": "page:/spinal-decompression-therapy/",
+      "sourceUrl": "https://ormondspinenervecenter.com/spinal-decompression-therapy/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 20,
+      "legacyId": "page:/knee-decompression-therapy/",
+      "sourceUrl": "https://ormondspinenervecenter.com/knee-decompression-therapy/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 21,
+      "legacyId": "page:/shockwave-therapy/",
+      "sourceUrl": "https://ormondspinenervecenter.com/shockwave-therapy/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 22,
+      "legacyId": "page:/laser-therapy/",
+      "sourceUrl": "https://ormondspinenervecenter.com/laser-therapy/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 23,
+      "legacyId": "page:/compression-therapy/",
+      "sourceUrl": "https://ormondspinenervecenter.com/compression-therapy/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 24,
+      "legacyId": "page:/car-accidents-personal-injury/",
+      "sourceUrl": "https://ormondspinenervecenter.com/car-accidents-personal-injury/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 25,
+      "legacyId": "page:/conditions-we-treat/",
+      "sourceUrl": "https://ormondspinenervecenter.com/conditions-we-treat/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 26,
+      "legacyId": "page:/conditions/spine/",
+      "sourceUrl": "https://ormondspinenervecenter.com/conditions/spine/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 27,
+      "legacyId": "page:/conditions/knee-joint/",
+      "sourceUrl": "https://ormondspinenervecenter.com/conditions/knee-joint/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 28,
+      "legacyId": "page:/conditions/neuropathy-nerve/",
+      "sourceUrl": "https://ormondspinenervecenter.com/conditions/neuropathy-nerve/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 29,
+      "legacyId": "page:/conditions/joint-extremity/",
+      "sourceUrl": "https://ormondspinenervecenter.com/conditions/joint-extremity/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 30,
+      "legacyId": "page:/conditions/muscle-soft-tissue/",
+      "sourceUrl": "https://ormondspinenervecenter.com/conditions/muscle-soft-tissue/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 31,
+      "legacyId": "page:/conditions/circulatory-recovery/",
+      "sourceUrl": "https://ormondspinenervecenter.com/conditions/circulatory-recovery/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 32,
+      "legacyId": "page:/conditions/headaches/",
+      "sourceUrl": "https://ormondspinenervecenter.com/conditions/headaches/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 33,
+      "legacyId": "page:/conditions/wellness/",
+      "sourceUrl": "https://ormondspinenervecenter.com/conditions/wellness/"
+    },
+    {
+      "action": "updated",
+      "collection": "pages",
+      "id": 34,
+      "legacyId": "page:/sitemap/",
+      "sourceUrl": "https://ormondspinenervecenter.com/sitemap/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 1,
+      "legacyId": "post:how-laser-therapy-may-help-relieve-tendon-pain-in-new-smyrna-beach",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/how-laser-therapy-may-help-relieve-tendon-pain-in-new-smyrna-beach/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 2,
+      "legacyId": "post:why-morning-leg-pain-may-call-for-spinal-decompression-therapy-in-port-orange",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/why-morning-leg-pain-may-call-for-spinal-decompression-therapy-in-port-orange/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 3,
+      "legacyId": "post:understanding-neuropathy-treatment-in-palm-coast-for-nighttime-burning",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/understanding-neuropathy-treatment-in-palm-coast-for-nighttime-burning/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 4,
+      "legacyId": "post:coughing-and-leg-pain-signs-of-a-herniated-disc",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/coughing-and-leg-pain-signs-of-a-herniated-disc/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 5,
+      "legacyId": "post:how-rainy-weather-can-affect-knee-pain-in-deland",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/how-rainy-weather-can-affect-knee-pain-in-deland/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 6,
+      "legacyId": "post:how-a-neuropathy-specialist-evaluates-new-balance-changes",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/how-a-neuropathy-specialist-evaluates-new-balance-changes/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 7,
+      "legacyId": "post:inside-holistic-pain-management-in-huntington-beach-for-active-adults",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/inside-holistic-pain-management-in-huntington-beach-for-active-adults/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 8,
+      "legacyId": "post:unlocking-neuromuscular-rehabilitation-for-back-pain-in-orange-county",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/unlocking-neuromuscular-rehabilitation-for-back-pain-in-orange-county/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 9,
+      "legacyId": "post:orange-county-functional-medicine-links-gut-health-and-chronic-pain",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/orange-county-functional-medicine-links-gut-health-and-chronic-pain/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 10,
+      "legacyId": "post:compression-therapy-for-circulation-and-recovery",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/compression-therapy-for-circulation-and-recovery/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 11,
+      "legacyId": "post:common-mistakes-in-herniated-disc-treatment-in-orange-county",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/common-mistakes-in-herniated-disc-treatment-in-orange-county/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 12,
+      "legacyId": "post:car-accident-early-chiropractic-care",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/car-accident-early-chiropractic-care/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 13,
+      "legacyId": "post:signs-non-surgical-spine-treatment-in-orange-county-is-working",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/signs-non-surgical-spine-treatment-in-orange-county-is-working/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 14,
+      "legacyId": "post:how-laser-therapy-speeds-healing",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/how-laser-therapy-speeds-healing/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 15,
+      "legacyId": "post:hidden-triggers-of-nerve-pain-and-when-to-seek-treatment-in-orange-county",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/hidden-triggers-of-nerve-pain-and-when-to-seek-treatment-in-orange-county/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 16,
+      "legacyId": "post:missed-signs-you-need-non-surgical-spine-treatment-in-orange-county",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/missed-signs-you-need-non-surgical-spine-treatment-in-orange-county/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 17,
+      "legacyId": "post:disc-herniation-vs-sciatica-whats-causing-leg-pain-in-irvine",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/disc-herniation-vs-sciatica-whats-causing-leg-pain-in-irvine/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 18,
+      "legacyId": "post:choosing-a-functional-medicine-doctor-in-irvine-for-chronic-pain",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/choosing-a-functional-medicine-doctor-in-irvine-for-chronic-pain/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 19,
+      "legacyId": "post:shockwave-therapy-accelerating-recovery",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/shockwave-therapy-accelerating-recovery/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 20,
+      "legacyId": "post:what-to-expect-from-herniated-disc-treatment-in-orange-county",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/what-to-expect-from-herniated-disc-treatment-in-orange-county/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 21,
+      "legacyId": "post:knee-decompression-therapy-chronic-knee-pain",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/knee-decompression-therapy-chronic-knee-pain/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 22,
+      "legacyId": "post:understanding-non-surgical-spine-treatment-in-orange-county",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/understanding-non-surgical-spine-treatment-in-orange-county/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 23,
+      "legacyId": "post:why-shoulder-pain-keeps-coming-back-after-rest-and-pt",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/why-shoulder-pain-keeps-coming-back-after-rest-and-pt/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 24,
+      "legacyId": "post:why-numbness-and-tingling-dont-go-away",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/why-numbness-and-tingling-dont-go-away/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 25,
+      "legacyId": "post:brain-fog-and-fatigue-functional-medicine-clues-to-explore",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/brain-fog-and-fatigue-functional-medicine-clues-to-explore/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 26,
+      "legacyId": "post:spinal-decompression-therapy-non-surgical-disc-relief",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/spinal-decompression-therapy-non-surgical-disc-relief/"
+    },
+    {
+      "action": "updated",
+      "collection": "posts",
+      "id": 27,
+      "legacyId": "post:how-chiropractic-care-relieves-back-pain",
+      "sourceUrl": "https://ormondspinenervecenter.com/blogs/how-chiropractic-care-relieves-back-pain/"
+    },
+    {
+      "action": "updated",
+      "collection": "header",
+      "legacyId": "global:header"
+    },
+    {
+      "action": "updated",
+      "collection": "footer",
+      "legacyId": "global:footer"
+    },
+    {
+      "action": "updated",
+      "collection": "site-settings",
+      "legacyId": "global:site-settings"
+    }
+  ]
+}

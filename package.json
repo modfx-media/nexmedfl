@@ -6,23 +6,46 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "cms:export": "node --import ./scripts/register-ts.mjs scripts/export-content.ts",
+    "cms:import": "node --import ./scripts/register-ts.mjs scripts/import-content.ts",
+    "cms:validate-export": "node scripts/validate-export.ts",
+    "generate:types": "node --import ./scripts/register-ts.mjs ./node_modules/payload/bin.js generate:types --disable-transpile",
+    "generate:importmap": "node --import ./scripts/register-ts.mjs ./node_modules/payload/bin.js generate:importmap --disable-transpile",
+    "payload": "node --import ./scripts/register-ts.mjs ./node_modules/payload/bin.js --disable-transpile"
   },
   "dependencies": {
+    "@img/sharp-libvips-linux-x64": "1.3.4",
+    "@img/sharp-linux-x64": "0.35.5",
+    "@neondatabase/serverless": "^1.2.0",
+    "@payloadcms/db-vercel-postgres": "^3.92.0",
+    "@payloadcms/next": "^3.92.0",
+    "@payloadcms/plugin-seo": "^3.92.0",
+    "@payloadcms/richtext-lexical": "^3.92.0",
+    "@payloadcms/storage-vercel-blob": "^3.92.0",
+    "@payloadcms/ui": "^3.92.0",
     "@vercel/blob": "^2.8.0",
+    "@vercel/postgres": "^0.10.0",
+    "graphql": "^16.11.0",
     "motion": "^12.43.0",
-    "next": "16.3.0",
+    "next": "^16.3.8",
+    "payload": "^3.92.0",
+    "pg": "^8.23.1",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pg": "^8.23.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^18.0.9",
     "eslint": "^9",
-    "eslint-config-next": "16.3.0",
+    "eslint-config-next": "^16.3.8",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }
