@@ -17,11 +17,19 @@ import { Footer } from "./globals/Footer";
 import { Header } from "./globals/Header";
 import { SiteSettings } from "./globals/SiteSettings";
 import { getCorsOrigins, getServerURL, isLocalDatabaseHost } from "./lib/cms/server-url";
+import { migrations } from "./migrations";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 const connectionString = process.env.DATABASE_URL || "";
 const onVercel = Boolean(process.env.VERCEL);
+const importing = process.env.CMS_IMPORT === "1";
+// Schema comes from committed migrations (prodMigrations on the first
+// production request). Push stays off on Vercel, in production, and during cms:import.
+const push =
+  onVercel || importing || process.env.NODE_ENV === "production"
+    ? false
+    : process.env.PAYLOAD_DB_PUSH === "true";
 
 export default buildConfig({
   admin: {
@@ -34,6 +42,15 @@ export default buildConfig({
   globals: [Header, Footer, SiteSettings],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
+  ...(importing
+    ? {
+        logger: {
+          options: {
+            level: "silent" as const,
+          },
+        },
+      }
+    : {}),
   serverURL: getServerURL(),
   cors: getCorsOrigins(),
   csrf: getCorsOrigins(),
@@ -47,8 +64,8 @@ export default buildConfig({
       idleTimeoutMillis: 10000,
       max: 8,
     },
-    // Schema changes ship as committed migrations. Push stays off on Vercel.
-    push: onVercel ? false : process.env.PAYLOAD_DB_PUSH === "true",
+    push,
+    prodMigrations: migrations,
     forceUseVercelPostgres: !isLocalDatabaseHost(connectionString),
     migrationDir: path.resolve(dirname, "migrations"),
   }),

@@ -1,8 +1,7 @@
-export const SITE_ORIGIN = (
-  process.env.SITE_ORIGIN ||
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://ormondspinenervecenter.com"
-).replace(/\/$/, "");
+import { SITE_URL } from "@/lib/site-config";
+
+// Ranked site matching uses the same public origin as canonicals.
+export const SITE_ORIGIN = SITE_URL;
 
 export const DEFAULT_COVER = "/images/blog/default-cover.jpg";
 
