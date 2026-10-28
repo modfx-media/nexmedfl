@@ -1,3 +1,4 @@
+import { withPayload } from "@payloadcms/next/withPayload";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -29,6 +30,21 @@ const nextConfig: NextConfig = {
       "./public/**/*.webm",
     ],
   },
+  // Sharp's linux binaries are optional dependencies and are otherwise
+  // omitted from the Vercel trace, which crashes /admin on image reads.
+  outputFileTracingIncludes: {
+    "/admin/**/*": [
+      "./node_modules/sharp/**/*",
+      "./node_modules/@img/sharp-linux-x64/**/*",
+      "./node_modules/@img/sharp-libvips-linux-x64/**/*",
+    ],
+  },
+  serverExternalPackages: [
+    "pg",
+    "@payloadcms/db-vercel-postgres",
+    "@neondatabase/serverless",
+    "@vercel/postgres",
+  ],
 };
 
-export default nextConfig;
+export default withPayload(nextConfig, { devBundleServerPackages: false });

@@ -2,10 +2,25 @@
 // Pure data only (no Node builtins) so this can be imported from both
 // Server and Client Components without breaking the Turbopack build.
 
-// Falls back to the production domain; override with NEXT_PUBLIC_SITE_URL
-// (set in Vercel project settings) for preview/staging deployments.
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://ormondspinenervecenter.com";
+// Public SEO origin. Production canonicals, sitemap locs, Open Graph
+// URLs, JSON-LD, and robots.txt all use this apex. NEXT_PUBLIC_SITE_URL
+// and NEXT_PUBLIC_SERVER_URL are not read here: those may point at a
+// *.vercel.app host for Payload, and must not change public SEO.
+const PRODUCTION_ORIGIN = "https://ormondspinenervecenter.com";
+
+function resolvePublicOrigin(): string {
+  const configured = process.env.SITE_ORIGIN?.trim();
+  if (!configured) return PRODUCTION_ORIGIN;
+  try {
+    const host = new URL(configured).hostname.replace(/^www\./, "").toLowerCase();
+    if (host === "ormondspinenervecenter.com") return PRODUCTION_ORIGIN;
+  } catch {
+    return PRODUCTION_ORIGIN;
+  }
+  return PRODUCTION_ORIGIN;
+}
+
+export const SITE_URL = resolvePublicOrigin();
 export const SITE_NAME = "Ormond Spine & Nerve Center";
 export const SITE_DEFAULT_DESCRIPTION =
   "Ormond Spine & Nerve Center is a medical clinic in Ormond Beach, FL specializing in chiropractic care, spinal and knee decompression therapy, neuropathy treatment, shockwave, laser, and compression therapy.";
