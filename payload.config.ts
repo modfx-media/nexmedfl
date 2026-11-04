@@ -104,15 +104,18 @@ export default buildConfig({
         },
       ],
     }),
-    ...(process.env.BLOB_READ_WRITE_TOKEN
-      ? [
-          vercelBlobStorage({
-            collections: {
-              media: true,
-            },
-            token: process.env.BLOB_READ_WRITE_TOKEN,
-          }),
-        ]
-      : []),
+    // Always register the plugin so the media schema (prefix, _objectKey)
+    // matches production, where BLOB_READ_WRITE_TOKEN is set. Without
+    // those columns, /api/media queries 500. clientUploads sends the
+    // file from the browser to Blob; Vercel rejects function bodies
+    // over ~4.5 MB, which is the admin upload failure for larger images.
+    vercelBlobStorage({
+      alwaysInsertFields: true,
+      collections: {
+        media: true,
+      },
+      clientUploads: true,
+      token: process.env.BLOB_READ_WRITE_TOKEN,
+    }),
   ],
 });
