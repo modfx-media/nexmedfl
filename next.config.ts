@@ -1,6 +1,12 @@
 import { withPayload } from "@payloadcms/next/withPayload";
 import type { NextConfig } from "next";
 
+const sharpBinaries = [
+  "./node_modules/sharp/**/*",
+  "./node_modules/@img/sharp-linux-x64/**/*",
+  "./node_modules/@img/sharp-libvips-linux-x64/**/*",
+];
+
 const nextConfig: NextConfig = {
   // The live WordPress site serves every URL with a trailing slash
   // (e.g. /payment-plans/). This preserves those exact URLs with no
@@ -31,13 +37,11 @@ const nextConfig: NextConfig = {
     ],
   },
   // Sharp's linux binaries are optional dependencies and are otherwise
-  // omitted from the Vercel trace, which crashes /admin on image reads.
+  // omitted from the Vercel trace. Uploads and file reads run in the
+  // /api/[...slug] function; a missing libvips makes /api/media 500.
   outputFileTracingIncludes: {
-    "/admin/**/*": [
-      "./node_modules/sharp/**/*",
-      "./node_modules/@img/sharp-linux-x64/**/*",
-      "./node_modules/@img/sharp-libvips-linux-x64/**/*",
-    ],
+    "/admin/**/*": sharpBinaries,
+    "/api/**/*": sharpBinaries,
   },
   serverExternalPackages: [
     "pg",

@@ -15,8 +15,6 @@
     "payload": "node --import ./scripts/register-ts.mjs ./node_modules/payload/bin.js --disable-transpile"
   },
   "dependencies": {
-    "@img/sharp-libvips-linux-x64": "1.3.4",
-    "@img/sharp-linux-x64": "0.35.5",
     "@neondatabase/serverless": "^1.2.0",
     "@payloadcms/db-vercel-postgres": "^3.92.0",
     "@payloadcms/next": "^3.92.0",
@@ -47,5 +45,9 @@
     "tailwindcss": "^4",
     "tsx": "^4.23.15",
     "typescript": "^5"
+  },
+  "optionalDependencies": {
+    "@img/sharp-libvips-linux-x64": "1.3.4",
+    "@img/sharp-linux-x64": "0.35.5"
   }
 }
