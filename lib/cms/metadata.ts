@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { buildMetadata } from "@/lib/seo";
 
+import { cmsPostImage } from "./map-post";
 import { getPageByPath, getPostByPath } from "./queries";
 import type { CmsDoc } from "./types";
 
@@ -12,7 +13,7 @@ function metadataFromDoc(path: string, doc: CmsDoc, type: "website" | "article")
     path,
     title,
     description,
-    image: doc.imagePath || undefined,
+    image: cmsPostImage(doc),
     type,
   });
 

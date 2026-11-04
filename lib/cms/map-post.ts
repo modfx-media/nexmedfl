@@ -1,4 +1,5 @@
 import type { BlogPostEntry } from "@/lib/posts";
+import { fallbackCover } from "@/lib/ranked/config";
 
 import type { CmsDoc } from "./types";
 
@@ -6,6 +7,14 @@ function mediaUrl(image: CmsDoc["image"]): string | undefined {
   if (!image || typeof image === "number") return undefined;
   if (typeof image === "string") return image;
   return image.url || undefined;
+}
+
+/** Uploaded or path image, otherwise a topic photo so the hero is never blank. */
+export function cmsPostImage(doc: Pick<CmsDoc, "image" | "imagePath" | "title" | "slug">): string | undefined {
+  const explicit = doc.imagePath?.trim() || mediaUrl(doc.image);
+  if (explicit) return explicit;
+  if (!doc.title) return undefined;
+  return fallbackCover(doc.title, doc.slug || undefined);
 }
 
 function textList(items?: { text?: string | null }[] | null): string[] | undefined {
@@ -30,7 +39,7 @@ export function cmsDocToBlogEntry(doc: CmsDoc): BlogPostEntry | null {
     title: doc.title,
     metaTitle: doc.meta?.title || doc.searchTitle || undefined,
     description: doc.meta?.description || doc.description || "",
-    image: doc.imagePath || mediaUrl(doc.image),
+    image: cmsPostImage(doc),
     imageWidth: doc.imageWidth || undefined,
     imageHeight: doc.imageHeight || undefined,
     imageCaption: doc.imageCaption || undefined,
