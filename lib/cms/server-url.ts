@@ -27,8 +27,8 @@ export function isVercelAppHost(value: string): boolean {
  * Payload admin and API origin only. Public SEO uses SITE_URL.
  * NEXT_PUBLIC_SITE_URL is intentionally not a fallback.
  * On Vercel a localhost value is never used.
- * On Vercel production a *.vercel.app host is never used: the admin
- * session cookie is not sent on that cross-origin Blob token request.
+ * On Vercel a *.vercel.app host is never used: the admin session
+ * cookie is not sent on that cross-origin Blob token request.
  */
 export function getServerURL(): string {
   const explicit = stripTrailingSlash(process.env.NEXT_PUBLIC_SERVER_URL || "");
@@ -37,7 +37,7 @@ export function getServerURL(): string {
   const useExplicit =
     Boolean(explicit) &&
     !(onVercel && isLocalHost(explicit)) &&
-    !(production && isVercelAppHost(explicit));
+    !(onVercel && isVercelAppHost(explicit));
 
   if (useExplicit) return explicit;
 
