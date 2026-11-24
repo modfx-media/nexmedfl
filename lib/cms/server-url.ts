@@ -9,27 +9,45 @@ function isLocalHost(value: string): boolean {
   return /localhost|127\.0\.0\.1|\[::1\]/.test(value);
 }
 
+/** True when the URL's hostname is a Vercel project host (*.vercel.app). */
+export function isVercelAppHost(value: string): boolean {
+  try {
+    const trimmed = value.trim();
+    if (!trimmed) return false;
+    const withProtocol = /^[a-z][a-z0-9+.-]*:\/\//i.test(trimmed)
+      ? trimmed
+      : `https://${trimmed}`;
+    return new URL(withProtocol).hostname.toLowerCase().endsWith(".vercel.app");
+  } catch {
+    return false;
+  }
+}
+
 /**
  * Payload admin and API origin only. Public SEO uses SITE_URL.
  * NEXT_PUBLIC_SITE_URL is intentionally not a fallback.
  * On Vercel a localhost value is never used.
+ * On Vercel production a *.vercel.app host is never used: the admin
+ * session cookie is not sent on that cross-origin Blob token request.
  */
 export function getServerURL(): string {
   const explicit = stripTrailingSlash(process.env.NEXT_PUBLIC_SERVER_URL || "");
   const onVercel = Boolean(process.env.VERCEL);
+  const production = process.env.VERCEL_ENV === "production";
+  const useExplicit =
+    Boolean(explicit) &&
+    !(onVercel && isLocalHost(explicit)) &&
+    !(production && isVercelAppHost(explicit));
 
-  if (explicit && !(onVercel && isLocalHost(explicit))) {
-    return explicit;
+  if (useExplicit) return explicit;
+
+  if (onVercel && production) {
+    return `https://${PUBLIC_APEX}`;
   }
 
   if (onVercel) {
-    if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
-      return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
-    }
-    if (process.env.VERCEL_URL) {
-      return `https://${process.env.VERCEL_URL}`;
-    }
-    return PREVIEW_ORIGIN;
+    const deployment = stripTrailingSlash(process.env.VERCEL_URL || "");
+    return deployment ? `https://${deployment}` : PREVIEW_ORIGIN;
   }
 
   return explicit || "http://localhost:3000";
