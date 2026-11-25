@@ -30,6 +30,10 @@ const push =
   onVercel || importing || process.env.NODE_ENV === "production"
     ? false
     : process.env.PAYLOAD_DB_PUSH === "true";
+// Preview deployments can share the production database. The Postgres
+// adapter runs prodMigrations on every NODE_ENV=production connect, so
+// a preview build must not receive them.
+const prodMigrations = process.env.VERCEL_ENV === "preview" ? undefined : migrations;
 
 export default buildConfig({
   admin: {
@@ -65,7 +69,7 @@ export default buildConfig({
       max: 8,
     },
     push,
-    prodMigrations: migrations,
+    prodMigrations,
     forceUseVercelPostgres: !isLocalDatabaseHost(connectionString),
     migrationDir: path.resolve(dirname, "migrations"),
   }),

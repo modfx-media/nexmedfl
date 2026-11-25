@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { imageSrcForRendering } from "@/lib/cms/image-src";
 import { Reveal } from "@/components/Reveal";
 import { ReadingProgressBar } from "@/components/blog/ReadingProgressBar";
 import { PostCard } from "@/components/blog/BlogFilterGrid";
@@ -107,7 +108,7 @@ export function BlogPostBody({
               <Reveal delay={0.2}>
                 <div className="relative mt-8 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-surface-border">
                   <Image
-                    src={post.image}
+                    src={imageSrcForRendering(post.image)}
                     alt={post.imageCaption ?? post.title}
                     fill
                     sizes="(min-width: 1024px) 768px, 100vw"
