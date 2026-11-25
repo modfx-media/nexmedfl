@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CMSRoute } from "@/components/cms/CMSRoute";
 import { resolvePostMetadata } from "@/lib/cms/metadata";
-import { getPostByPath } from "@/lib/cms/queries";
+import { getPostByPath, isCmsDraftMode } from "@/lib/cms/queries";
+import { isPublicPost } from "@/lib/cms/publish-window";
 import { buildMetadata } from "@/lib/seo";
 import { buildGraph } from "@/lib/schema";
 import { JsonLd } from "@/components/JsonLd";
@@ -16,7 +17,8 @@ import {
 } from "@/lib/ranked/entries";
 import { SITE_URL } from "@/lib/site-config";
 
-export const revalidate = 3600;
+// Short ISR so a scheduled post appears after datePublished without a redeploy.
+export const revalidate = 300;
 
 // JSON-LD requires a fully-qualified image URL; post.image may be a
 // relative local path (e.g. "/images/blog/...") for posts using locally
@@ -56,13 +58,14 @@ export default async function BlogPostPage(
 ) {
   const { slug } = await props.params;
   const path = `/blogs/${slug}/`;
+  const draft = await isCmsDraftMode();
   const [post, posts] = await Promise.all([
     findPublishedBlogPost(slug),
     getPublishedBlogEntries(),
   ]);
-  if (!post) {
+  if (!post || !isPublicPost(post, { draft })) {
     const cmsPost = await getPostByPath(path);
-    if (!cmsPost) notFound();
+    if (!cmsPost || !isPublicPost(cmsPost, { draft })) notFound();
     return (
       <CMSRoute path={path} kind="post">
         {null}

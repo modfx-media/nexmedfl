@@ -6,7 +6,7 @@ import {
   authenticated,
   contentVersions,
   emptyToNull,
-  publishedOrAuthenticated,
+  publishedPostOrAuthenticated,
   slugifyFromName,
 } from "./shared";
 
@@ -20,7 +20,7 @@ export const Posts: CollectionConfig = {
   access: {
     create: authenticated,
     delete: authenticated,
-    read: publishedOrAuthenticated,
+    read: publishedPostOrAuthenticated,
     update: authenticated,
   },
   versions: contentVersions,
