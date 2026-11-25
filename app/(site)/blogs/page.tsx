@@ -8,7 +8,8 @@ import { getStaticPage } from "@/lib/pages";
 import { BlogsPageBody } from "@/components/BlogsPageBody";
 import { getPublishedBlogEntries } from "@/lib/ranked/entries";
 
-export const revalidate = 3600;
+// Short ISR so a scheduled post appears after datePublished without a redeploy.
+export const revalidate = 300;
 
 const PAGE = getStaticPage("/blogs/");
 

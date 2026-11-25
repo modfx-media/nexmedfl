@@ -1,4 +1,6 @@
 import { listCmsBlogEntries } from "@/lib/cms/blog-entries";
+import { isCmsDraftMode } from "@/lib/cms/queries";
+import { findPublicPost, selectPublicPosts } from "@/lib/cms/publish-window";
 import { BLOG_POSTS, type BlogPostEntry } from "@/lib/posts";
 import { assignUniqueBlogCovers, DEFAULT_CTA } from "./config";
 import type { BlogPostData } from "./types";
@@ -35,6 +37,8 @@ export function blogPostDataToEntry(post: BlogPostData): BlogPostEntry {
 }
 
 export async function getPublishedBlogEntries(): Promise<BlogPostEntry[]> {
+  const draft = await isCmsDraftMode();
+  const now = new Date();
   const local = BLOG_POSTS;
   // Ranked CMS merge disabled — only hand-written local posts are served.
   const uniqued = assignUniqueBlogCovers(local, {
@@ -45,13 +49,15 @@ export async function getPublishedBlogEntries(): Promise<BlogPostEntry[]> {
     (a, b) =>
       new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime(),
   );
+  // Filter after cover assignment so a future local post cannot reshuffle covers.
+  const visibleLocal = selectPublicPosts(sorted, { draft, now });
 
   // Published Payload posts are additive. A matching slug replaces the
-  // designed entry; drafts never reach this list outside draft mode.
-  const cmsPosts = await listCmsBlogEntries();
-  if (cmsPosts.length === 0) return sorted;
+  // designed entry; drafts and future dates never reach this list outside draft mode.
+  const cmsPosts = selectPublicPosts(await listCmsBlogEntries(), { draft, now });
+  if (cmsPosts.length === 0) return visibleLocal;
 
-  const bySlug = new Map(sorted.map((post) => [post.slug, post]));
+  const bySlug = new Map(visibleLocal.map((post) => [post.slug, post]));
   for (const post of cmsPosts) bySlug.set(post.slug, post);
   return [...bySlug.values()].sort(
     (a, b) =>
@@ -62,8 +68,8 @@ export async function getPublishedBlogEntries(): Promise<BlogPostEntry[]> {
 export async function findPublishedBlogPost(
   slug: string,
 ): Promise<BlogPostEntry | undefined> {
-  const posts = await getPublishedBlogEntries();
-  return posts.find((post) => post.slug === slug);
+  const [posts, draft] = await Promise.all([getPublishedBlogEntries(), isCmsDraftMode()]);
+  return findPublicPost(posts, slug, { draft });
 }
 
 export async function getPublishedBlogEntryParams(): Promise<

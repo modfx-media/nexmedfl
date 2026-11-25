@@ -8,7 +8,8 @@ import { getStaticPage } from "@/lib/pages";
 import { SitemapPageBody } from "@/components/SitemapPageBody";
 import { getPublishedBlogEntries } from "@/lib/ranked/entries";
 
-export const revalidate = 3600;
+// Short ISR so a scheduled post appears in the HTML sitemap after datePublished.
+export const revalidate = 300;
 
 const PAGE = getStaticPage("/sitemap/");
 

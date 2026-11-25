@@ -14,7 +14,7 @@ function isExcluded(doc: CmsDoc): boolean {
 export async function getCmsSitemapEntries(
   collection: "pages" | "posts",
 ): Promise<CmsSitemapEntry[]> {
-  const docs = await listCmsDocs(collection);
+  const docs = await listCmsDocs(collection, false);
   const entries: CmsSitemapEntry[] = [];
   for (const doc of docs) {
     if (!doc.path || isExcluded(doc)) continue;

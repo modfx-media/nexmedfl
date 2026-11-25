@@ -1,5 +1,7 @@
 import type { Access, FieldHook } from "payload";
 
+import { publishedByDateWhere } from "@/lib/cms/publish-window";
+
 /** Unique text columns treat "" as a value. Store null so drafts can be created blank. */
 export const emptyToNull: FieldHook = ({ value }) => (value === "" ? null : value);
 
@@ -26,6 +28,21 @@ export const publishedOrAuthenticated: Access = ({ req }) => {
     _status: {
       equals: "published",
     },
+  };
+};
+
+/** Published posts whose datePublished is already due. Draft preview overrides access. */
+export const publishedPostOrAuthenticated: Access = ({ req }) => {
+  if (req.user) return true;
+  return {
+    and: [
+      {
+        _status: {
+          equals: "published",
+        },
+      },
+      publishedByDateWhere(),
+    ],
   };
 };
 

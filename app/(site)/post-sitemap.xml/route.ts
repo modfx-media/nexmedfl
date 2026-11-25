@@ -1,9 +1,11 @@
+import { publicSitemapLocs, selectPublicPosts } from "@/lib/cms/publish-window";
 import { getCmsSitemapEntries } from "@/lib/cms/sitemap";
 import { SITE_URL } from "@/lib/site-config";
 import { BLOG_POSTS, getBlogPostPath } from "@/lib/posts";
 import { getPublishedBlogEntries } from "@/lib/ranked/entries";
 
-export const revalidate = 3600;
+// Short ISR so a scheduled post is added after datePublished without a redeploy.
+export const revalidate = 300;
 
 // Mirrors the live site's Rank Math "post-sitemap.xml" (blog posts only).
 export async function GET() {
@@ -13,13 +15,17 @@ export async function GET() {
   const extraPaths = new Set(
     extras.map((entry) => entry.path).filter((path) => !baseline.has(path)),
   );
-  const visible = posts.filter((post) => {
-    const path = getBlogPostPath(post);
-    return baseline.has(path) || extraPaths.has(path);
-  });
+  const visible = selectPublicPosts(
+    posts.filter((post) => {
+      const path = getBlogPostPath(post);
+      return baseline.has(path) || extraPaths.has(path);
+    }),
+    { draft: false },
+  );
+  const locs = publicSitemapLocs(visible, { origin: SITE_URL, draft: false });
   const urls = visible.map(
-    (post) => `  <url>
-    <loc>${SITE_URL}${getBlogPostPath(post)}</loc>
+    (post, index) => `  <url>
+    <loc>${locs[index]}</loc>
     <lastmod>${post.dateModified}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
