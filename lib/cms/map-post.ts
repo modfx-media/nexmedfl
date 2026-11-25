@@ -9,7 +9,11 @@ function mediaUrl(image: CmsDoc["image"]): string | undefined {
   return image.url || undefined;
 }
 
-/** Uploaded or path image, otherwise a topic photo so the hero is never blank. */
+/**
+ * Uploaded or path image for metadata and JSON-LD. Own-site Payload file
+ * URLs stay absolute (including the trailing slash). next/image uses
+ * imageSrcForRendering so the optimizer receives a relative file path.
+ */
 export function cmsPostImage(doc: Pick<CmsDoc, "image" | "imagePath" | "title" | "slug">): string | undefined {
   const explicit = doc.imagePath?.trim() || mediaUrl(doc.image);
   if (explicit) return explicit;

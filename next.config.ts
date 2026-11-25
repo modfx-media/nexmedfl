@@ -26,6 +26,21 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "*.blob.vercel-storage.com",
       },
+      {
+        protocol: "https",
+        hostname: "ormondspinenervecenter.com",
+        pathname: "/api/media/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.ormondspinenervecenter.com",
+        pathname: "/api/media/**",
+      },
+      {
+        protocol: "https",
+        hostname: "*.vercel.app",
+        pathname: "/api/media/**",
+      },
     ],
   },
   // Keep cron/webhook bundles small: never file-trace public media.

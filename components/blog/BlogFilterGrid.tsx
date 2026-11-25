@@ -10,6 +10,7 @@ import {
   type BlogPostEntry,
 } from "@/lib/posts";
 import { BLOG_TOPICS } from "@/lib/contact-content";
+import { imageSrcForRendering } from "@/lib/cms/image-src";
 import { Reveal } from "@/components/Reveal";
 
 function formatDate(iso: string): string {
@@ -54,7 +55,7 @@ export function PostCard({ post, delay, large = false }: { post: BlogPostEntry; 
         >
           {post.image ? (
             <Image
-              src={post.image}
+              src={imageSrcForRendering(post.image)}
               alt={post.imageCaption ?? post.title}
               fill
               sizes={large ? "(min-width: 1024px) 50vw, 100vw" : "(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw"}
